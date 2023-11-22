@@ -1,0 +1,79 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+
+}
+section
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color:rgb(192, 192, 192);
+
+}
+h2
+{
+    font-size: 60px;
+    color: #ffff;
+    text-transform: uppercase;
+    
+}
+p
+{
+    color: rgb(80, 107, 107);
+    font-size: 25px;
+    text-transform: uppercase;
+}
+section .animate
+{
+ transition: 1.5s;
+}
+.sec-1 .animate
+{
+    transform: translateX(-100%);
+}
+.sec-1.show-animate .animate
+{
+    transform: translateX(0);
+}
+.sec-1 img
+{
+    mix-blend-mode: multiply;
+}
+.sec-2 .animate
+{
+    transform: translateX(100%);
+}
+.sec-2.show-animate .animate
+{
+    transform: translate(0);
+}
+.sec-2 p{
+    color: rgb(106, 119, 121);
+}
+.sec-3 .animate
+{
+    transform: translateX(-100%);
+}
+.sec-3.show-animate .animate
+{
+    transform: translateX(0);
+}
+.sec-3 .images img{
+    max-width: 150px;
+    margin: 15px 35px;
+    cursor: pointer;
+    opacity: .8;
+    transform: translateX(-100%);
+    transition-delay: calc(.2s *var(--i));
+}
+.sec-3 .images img:hover{
+    opacity:1 ;
+
+}
+.sec-3.show-animate .images img{
+transform: translateX(0);
+}

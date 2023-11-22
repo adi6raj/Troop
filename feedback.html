@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="icon/chat.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="css/feedback.css">
+</head>
+<body>
+    <div class="container">
+        <div style="text-align:center">
+          <h2>FEEDBACK</h2>
+          <p>Swing by for a cup of coffee, or leave us a message:</p>
+        </div>
+        <div class="row">
+          <div class="column">
+            <img src="img/boy.png" style="width:80%">
+          </div>
+          <div class="column">
+            <form onsubmit="sendEmail(); reset(); return false;">
+              <label for="fname">Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+              <label for="lname">E-mail</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your Email..">
+              <label for="country">Country</label>
+              <select id="country" name="country">
+                <option value="australia">India</option>
+                <option value="canada">Australia</option>
+                <option value="usa">canada</option>
+                <option value="usa">USA</option>
+              </select>
+              <label for="subject">Feedback</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+        </div>
+      </div>
+      <script src="https://smtpjs.com/v3/smtp.js">
+      </script>
+            <script>
+        function sendEmail()
+        {
+          Email.send({
+               SecureToken: "899b41b5-c8d0-4128-9a03-35026da860f5",
+               To : 'carya821@gmail.com',
+               From :"adi6raj0@gmail.com",
+               Subject : "New Feedback",
+               Body : "Name:"+document.getElementById("fname").value
+               +"<br> Email: "+document.getElementById("lname").value
+               +"<br> Country: "+document.getElementById("country").value
+               +"<br> Subject: "+document.getElementById("subject").value
+               
+             }).then(
+             message => alert("Thank you for feedback.....")
+             );        
+        }
+      </script>
+</body>
+</html>
