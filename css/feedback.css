@@ -8,7 +8,7 @@
   }  
   /* Style inputs */
   input[type=text], select, textarea {
-    width: 91%;
+    width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     margin-top: 6px;
@@ -19,7 +19,7 @@
   input[type=submit] {
     background-color: #04AA6D;
     color: white;
-    padding: 12px 20px;
+    padding: 12px;
     border: none;
     cursor: pointer;
   }
@@ -53,7 +53,7 @@
   /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 600px) {
     .column, input[type=submit] {
-      width: 100%;
+      width: 80%;
       margin-top: 0;
     }
   }
