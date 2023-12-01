@@ -25,7 +25,7 @@ nav
 nav ul{
     float:right;
     margin-right: 20px;
-    backdrop-filter:blur(10px);
+    backdrop-filter: blur(10px);
 
 }
 nav ul li 
@@ -103,8 +103,10 @@ a:hover
 }
 .detail
 {
-    margin-left: 70%;
-    margin-top: 20%;
+    float: left;
+    width: 42%;
+    margin-top: 200px;
+    padding: 25px;
 }
 .detail h1{
     font-size: 50px;
@@ -163,4 +165,21 @@ a:hover
 {
     background-color: #6d6b6b;
     color: #000;
+}
+
+.image
+{
+    float: left;
+    width: 42%;
+    margin-top: 200px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+
+}
+#boy
+{
+   position: relative;
+   top: 10px;
+   right: 350px;        
 }
